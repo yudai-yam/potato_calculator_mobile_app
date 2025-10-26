@@ -29,3 +29,11 @@ dev = "potato.main:dev"
 
 [tool.setuptools.dynamic]
 readme = {file = ["README.rst"]}
+
+[project.optional-dependencies]
+
+android-build = [
+    "buildozer==1.5.0",
+    "setuptools==80.9.0",
+    "Cython==3.1.6",
+]
