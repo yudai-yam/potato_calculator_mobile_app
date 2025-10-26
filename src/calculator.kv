@@ -17,6 +17,12 @@ BoxLayout:
         height: '48dp'
         on_release: app.calculate()
 
+    Button:
+        text: 'Export CSV'
+        size_hint_y: None
+        height: '48dp'
+        on_release: app.open_export_popup()
+
     Label:
         id: result_label
         text: 'Price: -'
