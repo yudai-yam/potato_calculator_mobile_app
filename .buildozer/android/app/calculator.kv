@@ -1,0 +1,29 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: dp(16)
+    spacing: dp(12)
+
+    TextInput:
+        id: grams_input
+        hint_text: 'Enter grams (e.g., 500)'
+        input_filter: 'float'
+        multiline: False
+        size_hint_y: None
+        height: '40dp'
+
+    Button:
+        text: 'Calculate price'
+        size_hint_y: None
+        height: '48dp'
+        on_release: app.calculate()
+
+    Button:
+        text: 'Export CSV'
+        size_hint_y: None
+        height: '48dp'
+        on_release: app.open_export_popup()
+
+    Label:
+        id: result_label
+        text: 'Price: -'
+        font_size: '20sp'
